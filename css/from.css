@@ -1,0 +1,135 @@
+@charset"utf-8";
+/* from表单样式 */
+*{
+	margin: 0;padding: 0; box-sizing:border-box; 
+}
+html,body{
+	/* background: rgba(0,0,0,0.3); */
+}
+/* 引入图标 */
+@font-face {
+  font-family: 'iconfont';
+  src: url('icon2/iconfont.eot');
+  src: url('icon2/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('icon2/iconfont.woff') format('woff'),
+  url('icon2/iconfont.ttf') format('truetype'),
+  url('icon2/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconfont{
+	font-size: 1.5em;
+	color: green;
+}
+.error{
+	color: red;
+}
+.font{
+	color: #ffbe00;
+}
+/* 引入图标结束 */
+section.wrap{
+	display: flex;
+	display: -webkit-flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+section.wrap .container{
+	width: auto;
+	
+}
+form{
+	margin: 30px 5px;
+
+}
+.container div.username{
+	display: flex;
+	line-height: 25px;
+	justify-content: flex-start;
+
+}
+.container div.username p{
+	display: none;
+}
+
+.container div.username i{
+	margin: 0 5px;
+}
+.container div.username label{
+
+	
+	margin-right: 10px;
+}
+
+div.username label>span{
+	font-size: 18px;
+	font-family: "楷体";
+	margin-right: -10px;
+
+}
+div.username label input{
+	height: 25px;
+	text-indent: 2px;
+}
+form div.adiv{
+	width:180px;
+	margin-left: 90px;
+	line-height: 25px;
+	font-size: 14px;
+	color: #ccc;
+}
+form div.adiv em{
+	width: 55px;
+	display: inline-block;
+	margin-left: 2px;
+	margin-top: 2px;
+	text-align: center;
+	font-size: 16px;
+	background: #ffbe00;
+}
+form div.adiv em.active{
+	background: red;
+}
+.password1{
+	margin-top: 10px;
+	width: 470px;
+	
+}
+@media (max-width:420px){
+	form div.adiv{
+		margin-left: 0px;
+		margin-top: 0px;
+		line-height: 25px;
+		font-size: 14px;
+		color: #ccc;
+    }
+    .password1{
+		width:auto;
+	
+    }
+}
+.yzm{
+	margin-top: 30px;
+}
+.yzm input{
+	width: 60px;
+}
+.submit{
+	text-align: left;
+	line-height: 40px;
+	margin: 20px 50px;
+	
+}
+.submit input{
+	height: 40px;
+	width: 150px;
+	font-size: 18px;
+	color: #fff;
+	background: red;
+}

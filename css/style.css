@@ -1,0 +1,338 @@
+@charset"utf-8";
+/*css-style.css样式*/
+
+*{
+	margin: 0;padding: 0;box-sizing: border-box;
+}
+html,body{
+	height: 100%;
+}
+ul,ol{
+	list-style-type: none;
+}
+a{text-decoration: none; color:;}
+
+img{
+	max-width: 100%;
+}
+/*page style*/
+section.st-main1{
+	display: flex;
+	display: -web-kit-flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+   background: url('../images/wallhaven-180318.jpg') no-repeat top center;
+
+}
+
+ section.st-main1 img.persion-pic{
+	width: 128px;
+	height: 128px;
+	border-radius: 50%;
+	margin-top: -60px;
+	box-shadow: 1px 2px 13px #efd289;
+}
+
+section div.saying{
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 10px;
+	line-height: 1.7em;
+	
+}
+section.st-main1 .saying h2{
+		color: #343232;
+		
+	}
+section div.saying p:nth-of-type(1){
+	font-size: 1em;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color: #00bcd4;
+}
+section div.saying p:nth-of-type(2){
+	color: #00bcd4;
+	font-size: 18px;
+}
+section.st-main1 .saying .saying-i{
+	
+	color: rgba(52, 53, 54, .8);
+    text-shadow: 2px 4px 8px #ccc;
+}
+@media (max-width:420px){
+	section.st-main1{
+		background: url('../images/wallhaven-460181.jpg') no-repeat  right;
+	}
+	section.st-main1 .saying h2{
+		color: #00bcd4;
+		font-weight: normal;
+		font-size: 1em;
+	}
+     section.st-main1 .saying .saying-i{
+     	font-size: 1em;
+     	color: blue;
+     	margin-top: 20px;
+    }
+}
+
+/* page1结束 */
+
+section.st-main2{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgb(244,244,244);
+}
+ 
+section.st-main2>h2{
+	font-size: 36px;
+	margin-top: 1em;
+
+}
+section.st-main2 img{
+	max-width: 200px
+}
+section.st-main2 .imgWrap{
+	padding: 10px 10px 3px;
+	text-align: center;
+	background: white;
+}
+section.st-main2>ul{
+	display: flex;
+	max-width: 700px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+@media (max-width: 420px){
+    section.st-main2>ul{justify-content: center;}
+ }
+section.st-main2>ul h3{
+	padding-left: 10px;
+	margin: 8px auto;
+	font-weight: none;
+	font-size: 16px;
+	border: 1px solid #b79797;
+	border-radius: 20px;
+	max-width: 150px;
+	line-height: 1em;
+}
+.glanceOver{
+	
+	font-size: 14px;
+	margin-left: 30px;
+	line-height: 25px;
+}
+.show-title1{
+	width: 200px;
+	height: 100px;
+	background-color: #ef1787;
+	
+}
+.show-title2{
+	width: 200px;
+	height: 100px;
+	background-color: #0f38c4;
+	
+}
+
+.show-title3{
+	width: 200px;
+	height: 100px;
+	background-color: #ef1787;
+	
+}
+
+.show-title4{
+	width: 200px;
+	height: 100px;
+	background-color: #977e94;
+	
+}
+
+.show-title5{
+	width: 200px;
+	height: 100px;
+	background-color: #ef1787;
+	
+}
+
+.show-title6{
+	width: 200px;
+	height: 100px;
+	background-color: #0f38c4;
+	
+}
+/* page2结束 */
+section.st-main3{
+	display: flex;
+	display: -web-kit-flex;
+	height: 100vh;
+	align-items: center;
+	justify-content:center;
+	flex-direction: column;
+	padding-top: 5px;
+	margin-top: 20px;
+	background-color:rgba(0,0,0,.2) ;
+}
+section.st-main3 .container{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	margin-top: 15px;
+	display: -webkit-flex;
+	justify-content: space-around;
+	justify-content: center;
+	
+}
+ section.st-main3 .container div{
+	
+	-webkit-align-self: stretch;
+    align-self: stretch;
+	
+} 
+.container div:nth-of-type(1){
+	background: url('../images/skill-bg1.jpg') no-repeat left center;
+	border-radius: 50%;
+	width: 300px;height: 300px;
+    flex: 1;
+}
+ .container div:nth-of-type(2){
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	flex: 2;
+	font-weight: normal;
+	padding:10px 20px;
+	line-height: 1.8em;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+@media (max-width: 420px){
+	section.st-main3 .container{
+		flex-direction: column;
+		align-items: center;
+
+	}
+	.container div:nth-of-type(2){
+		line-height: 1.7em;
+		margin-left: 5px;
+		padding-top: 0px;
+		font-size: 0.8em;
+
+	}
+	.container div:nth-of-type(1){
+		border-radius: 0;
+	    width: 100%;
+	    background-position: bottom right center;
+	}
+}
+ .container div.list-item2 ol:nth-of-type(1){
+	align-self: flex-start;
+	border-bottom: 2px dashed #b176aa;
+}
+.container div.list-item2 ol:nth-of-type(2){
+	margin-top: 8px;
+}
+ .container div:nth-of-type(3){
+	flex: 1;
+	background: url('../images/skill-bg4.jpg') no-repeat right center;
+} 
+
+ .container .list-item2 ol li i{
+   margin: 0 8px;
+}
+/* page3结束 */
+
+section.st-main4{
+	display: flex;
+	display: inline-flex;
+	display: -webkit-flex;
+	height: 80vh;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 5px;
+	align-items: center; 
+	background: url('../images/skill-bg.jpg') no-repeat  center;
+	background-size:100% 80%; 
+}
+
+section.st-main4 .footer-list{
+	width: 600px;
+	margin-top: 10px;
+	line-height: 1.7em;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-around;
+	
+}
+.footer-list dl{
+	margin-left: -100px;
+}
+.footer-list .img{
+	margin-top: 15px;
+}
+.footer-list dl dd{
+	font-size: 1.4em;
+	font-weight: 500;
+	font-family: "楷体";
+}
+.footer-list dl dt{
+	margin-left: 50px;
+	color:#007eed;
+	font-size: 1.2em;
+}
+@media (max-width: 420px){
+	section.st-main4{
+		height: 80vh;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 5px;
+		align-items: center; 
+		background: url('../images/skill-bg.jpg') no-repeat  top center;
+		background-size: auto 50vh; 
+	
+    }
+    section.st-main4 .footer-list{
+    	flex-direction: column;
+		justify-content: center;
+		margin-top: 5px;
+		width: auto;
+		align-items: center; 
+    }
+    .footer-list dl{
+    	margin-left: 10px;
+    }
+    .footer-list .img{
+    	margin-top: 10px;
+    }
+    .footer-list dl dd{
+    	font-size: 1em;
+    }
+    .footer-list dl dt{
+    	font-size: 1em;
+    }
+}
+/* page4结束 */
+section.st-main5{
+	display: flex;
+	display: -webkit-flex;
+	height: auto;
+	justify-content: center;
+	line-height: 2em;
+	margin: -47px 0 20px 0;
+	background-color:rgba(0,0,0,.2) ;
+}
+@media (max-width: 420px){
+	section.st-main5{
+		height: auto;
+		margin: 10px 0;
+	}
+}

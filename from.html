@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<link rel="stylesheet" href="css/from.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="icon2/iconfont.css">	
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/from.js"></script>
+<title>实现表单验证</title>
+</head>
+<body>
+ <section class="wrap">
+     <div class="container">
+     <h2>免费注册会员</h2>
+     	 <form action="" method="">
+     	 	<div class="username">
+	     	 	<label for="">
+		     	 	<span>用 户 名：</span>
+		     	 	<input type="text" calss="text" name="" id="">
+	     	 	</label>
+	     	 	<p class="msg" style="display: block;">
+	     	 		<i class="iconfont" style="color:#ffbe00">&#xe6bc;</i>请输入用户名
+	     	 	</p>
+     	 	</div>
+     	 	<div class="adiv"><b id="count">0个字符</b></div>
+     	 	<div class="username">
+	     	 	<label for="">
+		     	 	<span>登录密码：</span>
+		     	 	<input type="password" calss="password" name="" id="">
+	     	 	</label>
+	     	 	<p class="msg" >
+	     	 		<!-- <i class="iconfont">&#xe616;</i>5-25个字符，一个汉字为两个字符，由中文字母数字下划线组成 -->
+	     	 	</p>
+     	 	</div>
+     	 	<div class="adiv"><em class="active">弱</em><em>中</em><em>强</em></div>
+     	 	<div class="username password1" >
+	     	 	<label for="">
+		     	 	<span>确认密码：</span>
+		     	 	<input type="password" calss="password" name="" id="" disabled="">
+	     	 	</label>
+	     	 	<p class="msg">
+	     	 		<i class="iconfont">&#xe616;</i>请在输入一次密码
+	     	 	</p>
+     	 	</div>
+     	 	<div class="username yzm">
+	     	 	<label for="">
+		     	 	<span>验 证 码：</span>
+		     	 	<input type="password" calss="password" name="" id="">
+	     	 	</label>
+	     	 	<img src="images/link.jpg" alt="" width="80" height="40"><i class="iconfont">&#xe648;</i>
+     	 	</div>
+     	 	<div class="submit"><input type="submit" name="" id="" value="同意协议并注册" /></div>
+     	 </form>
+     </div>
+ </section>
+	
+</body>
+</html>

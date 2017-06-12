@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta lang="zh-cn">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+	<meta name="referrer" content="never">
+    <meta charset="UTF-8">
+    <title>my-music</title>
+    <link rel="stylesheet" type="text/css" href="css/my-fm.css" />
+    <link rel="stylesheet" type="text/css" href="fonts1/iconfont.css">   
+</head>
+<body>
+    <div id="music">
+        <div class="container">
+            <div class="header">
+                <ul class="clear-fix">
+                    <li><span class="iconfont option">&#xe646;</span></li>
+                    <li class="info">
+                        <div class="music-title"></div>
+                        <div class="music-artist"></div>
+                    </li>
+                    <li><a class="share" href="javascript:;" target="_blank"><span class="iconfont">&#xe61f;</span></a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="needle"></div>
+                <div class="option-list">
+                    <ul class="option-title option-none">
+                        <li>我喜欢的</li>
+                        <li>选择歌曲</li>
+                    </ul>
+                    <ul class="channels channels-list channels-none">
+                    </ul>
+                    <ul class="my-like channels-list channels-none"></ul>
+                </div>
+                <div class="picture"><img /></div>
+                <div class="lyric none">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="option-btn">
+                <ul class="clear-fix">
+                    <li><div><span class="iconfont like like-click">&#xe642;</span></div></li>
+                    <li><a class="download" href=""><span class="iconfont">&#xe650;</span></a></li>
+                    <li><span class="iconfont single">&#xe600;</span></li>
+                    <li><span class="iconfont lrc">&#xe50d;</span></li>
+                </ul>
+            </div>
+            <div class="controller">
+                <ul class="clear-fix">
+                    <li><span class="iconfont play">&#xe609;</span></li>
+                    <li><span class="iconfont next">&#xe528;</span></li>
+                    <li><div class="progress-bar"><span class="btn-bar"></span></div></li>
+                </ul>
+                <audio autoplay >你该换浏览器啦！</audio>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/music.js"></script>
+</body>
+</html>

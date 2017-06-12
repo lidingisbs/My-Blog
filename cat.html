@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue实现购物车</title>
+	<link rel="stylesheet" type="text/css" href="css/cart.css">
+	<link rel="stylesheet" type="text/css" href="icon1/iconfont.css">
+</head>
+<body>
+<div id="cart">
+ <!-- 头部购物车开始 -->
+ 	<div class="cart_title">
+ 		<span>购物车</span>
+ 	</div>
+ 	<!-- 头部购物车结束 -->
+ 	<div class="cart_main">
+ 	    <!-- 主体导航兰开始 -->
+ 		<div class="cart_main_head">
+ 			<div class="cart_main_headShow">
+ 				<div class="show_L">
+ 					<span>商品信息</span>
+ 				</div>
+ 				<div class="show_R">
+ 					<ul>
+ 						<li>商品金额</li>
+ 						<li>商品数量</li>
+ 						<li>总金额</li>
+ 						<li>编辑</li>
+ 					</ul>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<!-- 主题导航栏结束 -->
+ 		<!-- 中间for循环开始 -->
+ 		<ul class="cart_item_list">
+ 			<li v-for="item in list">
+ 			<!-- 第一个例表香烟图片开始 -->
+ 				<div class="list_l">
+ 					<div class="list-div cheak">
+ 						<input type="checkbox" name="" id="" >
+ 					</div>
+ 					<div class="list-div picture">
+ 						<img v-bind:src="item.productImage" alt="">
+ 					</div>
+ 					<div class="list-div part">
+ 						<div class="smonk">{{item.productName}}</div>
+ 						<dl>
+ 							<dt>赠送：</dt>
+ 							<dd v-for="part in item.parts" v-text="part.partsName">打火机</dd>
+ 						</dl>
+ 					</div>
+
+ 				</div>
+ 			<!-- 第一个例表香烟图片结束 -->
+ 				<div class="list_r">
+ 			     <!-- 例表2价格开始 -->
+ 					<div class="cart_tab_list2">
+ 						<div class="list-item">{{item.productPrice | formatMoney}}</div>
+ 					</div>
+
+ 				 <!-- 例表2结束 -->
+ 					<div class="cart_tab_list3">
+ 					   <div class="list-item1" v-on:click="changeMoney(item,-1)">-</div>
+ 					   <input type="text"  placeholder="0" disabled v-model="item.productQuentity">
+ 					   <div class="list-item2" @click="changeMoney(item,1)">+</div>
+ 					   <span>有货</span>
+ 					</div>
+ 				 <!-- 例表3结束 -->
+ 					<div class="cart_tab_list4">
+ 						<div class="list-item">{{item.productPrice*item.productQuentity | formatMoney}}</div>
+ 					</div>
+                 <!-- 例表4数量结束 -->
+ 					<div class="cart_tab_list5">
+ 						<div class="list_item">
+ 						    <i class="iconfont" style="font-size:24px;" >&#xe604;</i>
+ 						</div>
+ 					</div>
+ 				 <!-- 例表5编辑结束 -->
+ 				</div>
+ 			</li>
+ 		</ul>
+ 	</div>	
+ 		<!-- for循环结束 -->
+ 	<!-- fooder开始 -->
+ 	<div class="list_item_fooder">
+ 		<div class="list_item_fooder-main">
+ 		    <div class="fooder-main-l">
+ 		    	<input type="checkbox" name="" id="" value="全选" >
+ 		    	<span>全选</span>
+ 		    	<a href="jacascript:;" @click="checkAll(false)">
+	 		    	取消全选
+ 		    	</a>
+ 		    </div>
+ 		    <div class="fooder-main-r">
+ 		    	<div class="item-total">
+ 		    		总金额: <span class="total-price">{{totalMoney}}</span>
+ 		    	</div>
+ 		    	<div class="item-btn">
+ 		    		<a href="javascript:;" class="btn">结账</a>
+ 		    	</div>
+ 		    </div>
+ 		</div>
+ 	</div>
+ 	 <!-- foodder结束 -->
+ 	<!-- 关闭框开始 -->
+ 	<div class="moudle-show" v-bind:class="{'md-show':delFlag}">
+ 		<div class="show-content">
+ 			<div class="show-btn">
+ 				<button class="btn-close" @click="delFlag=false">关闭</button>
+ 			</div>
+ 			<div class="show-main">
+ 				<div class="content">
+ 					<p>你确定删除该项内容吗？</p>
+ 				</div>
+ 				<div class="btn-show">
+ 					<button class="btn-yes">yes</button>
+ 					<button class="btn-no" @click="delFlag=false">No</button>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<!-- 关闭框结束 -->
+</div>
+
+    <script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/vue-resource.min.js"></script>
+	<script type="text/javascript" src="js/cart.js"></script> 
+      
+</body>
+</html>

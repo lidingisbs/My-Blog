@@ -1,0 +1,147 @@
+/* CSS Document */
+ *{
+   margin:0;
+   padding:0;
+ }
+
+html{
+      background:-webkit-linear-gradient(top,#ff0 0%,#000 80%);/*渐变 1.方向(top left) 2.颜色。 3.颜色的终点*/
+	  overflow:hidden;
+	  height:100%;
+	 
+  
+}
+
+
+
+.sxt-wrap{
+    margin-top:200px;
+	perspective:1000px;/**/
+   
+}
+.sxt-cube{
+      width:200px;
+	  height:200px;
+	  margin:0 auto;
+	  position:relative;
+	  color:#fff;
+	  font-size:36px;
+	  line-height:200px;
+	  text-align:center;
+	  font-weight:bold;
+	  transform-style:preserve-3d;
+	  transform:rotateX(-30deg) rotateY(-70deg);
+	  animation:rotate 15s infinite linear;
+
+}
+.sxt-cube>span{
+
+     dispaly:block;
+	 width:200px;
+	 height:200px;
+	 border:1px solid black;
+	 position:absolute;
+	 background:#333;
+	 opacity:.6;
+	 margin-top:60px;
+	 transition:transform .3s ease-in;
+	 
+	 
+}
+
+.sxt-front{
+  transform:translateZ(100px);
+}
+.sxt-back{
+  transform:translateZ(-100px);
+}
+.sxt-left{
+  transform:translateX(-100px) rotateY(-90deg);
+}
+
+.sxt-right{
+transform:translateX(100px)  rotateY(90deg);
+}
+
+.sxt-top{
+ transform:translateY(100px)  rotateX(90deg);
+}
+.sxt-bottom{
+ transform:translateY(-100px)  rotateX(-90deg);
+}
+
+
+.sxt-cube>i{
+   width:100px;
+   height:100px;
+   background:#999;
+   display:block;
+   position:absolute;
+   top:115px;
+   left:150px;
+   border:1px solid #0000CC ;
+}
+.sxt-cube i:nth-of-type(1){
+  transform:translateZ(50px);
+}
+
+.sxt-cube i:nth-of-type(2){
+  transform:translateZ(-50px);
+  }
+.sxt-cube i:nth-of-type(3){
+  transform:translateX(-50px) rotateY(-90deg);
+}
+.sxt-cube i:nth-of-type(4){
+  transform:translateX(50px)  rotateY(90deg);
+}
+.sxt-cube i:nth-of-type(5){
+  transform:translateY(-50px)  rotateX(90deg);
+}
+.sxt-cube i:nth-of-type(6){
+  transform:translateY(50px)  rotateX(-90deg);
+}
+@-webkit-keyframes rotate{
+    0%{
+	  transform:rotateX(0deg) rotateY(0deg);
+	}
+	
+   100%{
+     transform:rotateX(360deg) rotateY(360deg);
+   }
+ }
+  
+ 
+.sxt-wrap:hover .sxt-front{
+  transform:translateZ(200px);
+}
+ .sxt-wrap:hover .sxt-back{
+  transform:translateZ(-200px);
+}
+ .sxt-wrap:hover .sxt-left{
+  transform:translateX(-200px) rotateY(-90deg);
+}
+
+ .sxt-wrap:hover .sxt-right{
+transform:translateX(200px)  rotateY(90deg);
+}
+
+ .sxt-wrap:hover .sxt-top{
+ transform:translateY(200px)  rotateX(90deg);
+}
+ .sxt-wrap:hover .sxt-bottom{
+ transform:translateY(-200px)  rotateX(-90deg);
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
