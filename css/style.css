@@ -291,13 +291,13 @@ section.st-main4 .footer-list{
 }
 @media (max-width: 420px){
 	section.st-main4{
-		height: 80vh;
+		height: auto;
 		flex-direction: column;
 		justify-content: center;
 		margin-top: 5px;
 		align-items: center; 
 		background: url('../images/skill-bg.jpg') no-repeat  top center;
-		background-size: auto 50vh; 
+		background-size: auto 50%; 
 	
     }
     section.st-main4 .footer-list{
